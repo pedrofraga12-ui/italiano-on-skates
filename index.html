@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITALIANO ON SKATES</title>
+<style>
+:root{--navy:#0B1F3A;--navy2:#16315A;--silver:#B8C0CC;--gray:#F2F4F7;--ink:#1B2433;--mute:#5E6B7E;--ok:#16315A;--bad:#8A94A6}
+*{box-sizing:border-box;margin:0}
+body{font:16px/1.6 system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+h1,h2,h3,.brand{font-family:"Didot","Bodoni MT","Playfair Display",Georgia,serif;color:var(--navy);font-weight:600}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--silver)}
+.bar{max-width:900px;margin:auto;padding:12px 18px 0}
+.brand{font-size:18px;letter-spacing:.18em}
+nav{display:flex;gap:4px;margin-top:6px}
+nav button{flex:1;background:none;border:0;border-bottom:3px solid transparent;padding:10px 4px;font:inherit;font-size:14px;color:var(--mute);cursor:pointer}
+nav button.on{color:var(--navy);border-color:var(--navy);font-weight:600}
+main{max-width:900px;margin:auto;padding:24px 18px 70px}
+section{display:none}section.on{display:block}
+button:focus-visible,input:focus-visible{outline:3px solid var(--silver);outline-offset:2px}
+.hero{background:var(--navy);color:#fff;border-radius:6px;padding:40px 26px;position:relative;overflow:hidden}
+.hero h1{color:#fff;font-size:clamp(32px,8vw,56px);line-height:1.05;letter-spacing:.04em;max-width:11em}
+.hero p{color:#D5DAE3;max-width:30em;margin:14px 0 24px}
+.wheels{position:absolute;right:-30px;bottom:-30px;opacity:.9}
+.btn{background:#fff;color:var(--navy);border:0;border-radius:3px;padding:13px 22px;font:inherit;font-weight:600;cursor:pointer}
+.btn.dk{background:var(--navy);color:#fff}
+.btn.ln{background:none;border:1px solid var(--silver);color:var(--navy)}
+.prog{margin-top:26px;background:var(--gray);border-radius:6px;padding:20px}
+.track{height:10px;background:#fff;border:1px solid var(--silver);border-radius:9px;overflow:hidden;margin:10px 0}
+.fill{height:100%;background:var(--navy);width:0;transition:width .5s}
+.stats{display:flex;gap:18px;flex-wrap:wrap;color:var(--mute);font-size:14px}
+h2{font-size:28px;margin-bottom:6px}.sub{color:var(--mute);margin-bottom:20px}
+.list{display:grid;gap:10px}
+.row{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:1px solid var(--silver);border-radius:5px;padding:14px 16px;font:inherit;color:inherit;cursor:pointer}
+.row:hover{background:var(--gray)}
+.dot{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--silver);display:grid;place-items:center;font-size:13px;color:#fff}
+.dot.d{background:var(--navy);border-color:var(--navy)}
+.row b{display:block;color:var(--navy)}.row small{color:var(--mute)}
+.card{background:#fff;border:1px solid var(--silver);border-radius:6px;padding:20px;margin-bottom:16px}
+table{width:100%;border-collapse:collapse;margin:14px 0}
+td{padding:9px 6px;border-bottom:1px solid var(--gray);vertical-align:top}td:first-child{font-weight:600;color:var(--navy);width:46%}
+.tip{background:var(--gray);border-left:3px solid var(--silver);padding:12px 14px;border-radius:3px;margin:14px 0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.chip{border:1px solid var(--silver);background:#fff;border-radius:20px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer;color:var(--navy)}
+.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.w{display:flex;justify-content:space-between;gap:12px}
+.w h3{font-size:20px}.star{background:none;border:0;font-size:24px;color:var(--silver);cursor:pointer;line-height:1}.star.on{color:var(--navy)}
+.ex{font-style:italic;color:var(--mute);font-size:15px}
+.opts{display:grid;gap:8px;margin:12px 0}
+.opt{text-align:left;border:1px solid var(--silver);background:#fff;border-radius:4px;padding:11px 14px;font:inherit;cursor:pointer;color:var(--ink)}
+.opt:hover:not(:disabled){background:var(--gray)}
+.opt.ok{background:var(--navy);color:#fff;border-color:var(--navy)}
+.opt.no{background:var(--gray);color:var(--bad);text-decoration:line-through}
+input[type=text]{width:100%;padding:11px 14px;border:1px solid var(--silver);border-radius:4px;font:inherit;margin:10px 0}
+.fb{margin-top:10px;padding:10px 14px;border-radius:4px;background:var(--gray);font-size:15px}
+.coach{background:var(--navy);color:#fff;border-radius:10px 10px 10px 2px;padding:12px 16px;max-width:85%;margin:10px 0}
+.coach small{display:block;color:#C5CDDA}
+.sec{margin:26px 0 10px;font-size:22px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="brand">ITALIANO ON SKATES</div>
+<nav id="nav"><button data-v="home">Início</button><button data-v="aulas">Aulas</button><button data-v="vocab">Vocabulário</button><button data-v="pratica">Prática</button></nav></div></header>
+<main>
+<section id="home">
+<div class="hero">
+<h1>Italiano para quem vive sobre rodas</h1>
+<p>Do básico ao vocabulário da patinação artística: aprenda a conversar com técnicos, atletas e profissionais, treino após treino.</p>
+<button class="btn" id="start">Começar a estudar</button>
+<svg class="wheels" width="190" height="130" viewBox="0 0 190 130" fill="none" stroke="#B8C0CC" stroke-width="1.5" aria-hidden="true"><circle cx="45" cy="85" r="34"/><circle cx="45" cy="85" r="12"/><circle cx="135" cy="85" r="34"/><circle cx="135" cy="85" r="12"/><circle cx="90" cy="45" r="26" opacity=".5"/></svg>
+</div>
+<div class="prog"><b style="color:var(--navy)">Seu progresso</b><div class="track"><div class="fill" id="fill"></div></div><div class="stats" id="stats"></div></div>
+</section>
+
+<section id="aulas"><div id="lessons"></div></section>
+
+<section id="vocab">
+<h2>Vocabulário</h2><p class="sub">40 palavras e expressões. Toque na estrela para guardar as suas favoritas.</p>
+<div class="chips" id="chips"></div><div class="list" id="vlist"></div>
+</section>
+
+<section id="pratica">
+<h2>Prática</h2><p class="sub">Responda e receba a correção na hora.</p>
+<h3 class="sec">Exercícios</h3><div id="exs"></div>
+<h3 class="sec">Diálogos com o técnico</h3><div id="dias"></div>
+</section>
+</main>
+
+<script>
+const LESSONS=[
+{t:"Saudações e apresentações",d:"Como cumprimentar e se apresentar.",p:[["Ciao","Oi / tchau (informal)"],["Buongiorno","Bom dia"],["Buonasera","Boa tarde / boa noite (ao chegar)"],["Buonanotte","Boa noite (ao dormir)"],["Arrivederci","Até logo"],["Come stai?","Como você está?"],["Sto bene, grazie","Estou bem, obrigado"],["Mi chiamo Pedro","Meu nome é Pedro"],["Sono brasiliano","Sou brasileiro"],["Piacere","Prazer"]],n:"Com o técnico ou pessoas mais velhas, use a forma educada: “Come sta?” em vez de “Come stai?”. Os dias da semana e os idiomas não levam letra maiúscula em italiano."},
+{t:"Alfabeto e fundamentos do italiano",d:"As regras de escrita e som que mais ajudam um brasileiro.",p:[["C + e/i","soa “tch”: ciao, cena"],["CH","soa “k”: chi, che"],["G + e/i","soa “dj”: gelato"],["GH","soa “g”: spaghetti"],["GN","soa “nh”: gnocchi"],["GLI","soa “lh”: famiglia"],["SC + e/i","soa “x”: scena, sci"],["Letras dobradas","são alongadas: pala (pá) ≠ palla (bola)"]],n:"O italiano tem 21 letras. J, K, W, X e Y aparecem só em palavras estrangeiras. Quase tudo se lê como se escreve, e o acento fica geralmente na penúltima sílaba."},
+{t:"Pronomes e verbos básicos",d:"Quem faz a ação: pronomes e os verbos essere (ser) e avere (ter).",p:[["io sono","eu sou"],["tu sei","você é (informal)"],["lui / lei è","ele / ela é"],["noi siamo","nós somos"],["voi siete","vocês são"],["loro sono","eles são"],["io ho","eu tenho"],["io voglio","eu quero"],["io posso","eu posso"],["io pattino","eu patino"]],n:"Em italiano o pronome costuma ser omitido: “Sono pronto” já significa “Eu estou pronto”. O verbo mostra quem fala."},
+{t:"Números, dias e horários",d:"Para combinar treinos e competições.",p:[["1 a 5","uno, due, tre, quattro, cinque"],["6 a 10","sei, sette, otto, nove, dieci"],["20 / 30","venti / trenta"],["lunedì, martedì, mercoledì","segunda, terça, quarta"],["giovedì, venerdì","quinta, sexta"],["sabato, domenica","sábado, domingo"],["Che ore sono?","Que horas são?"],["Sono le tre","São três horas"],["È l'una","É uma hora"],["Alle sei","Às seis"]],n:"Exemplo: “L'allenamento è martedì alle sei” = O treino é terça às seis. Atenção: sei é “seis” e também “você é”."},
+{t:"Conversas cotidianas",d:"Frases para manter uma conversa simples.",p:[["Di dove sei?","De onde você é?"],["Sono di Viamão","Sou de Viamão"],["Che cosa fai?","O que você faz?"],["Faccio pattinaggio","Eu faço patinação"],["Parli portoghese?","Você fala português?"],["Non capisco","Não entendo"],["Puoi ripetere?","Pode repetir?"],["Più piano, per favore","Mais devagar, por favor"],["Come si dice...?","Como se diz...?"],["Grazie mille","Muito obrigado"]],n:"“Non capisco” e “Puoi ripetere?” são as duas frases mais úteis para quem está começando. Use sem medo."},
+{t:"Perguntas e respostas",d:"As palavras interrogativas.",p:[["Chi?","Quem?"],["Che cosa?","O quê?"],["Dove?","Onde?"],["Quando?","Quando?"],["Perché?","Por quê? (e também: porque)"],["Come?","Como?"],["Quanto?","Quanto?"],["Quale?","Qual?"],["Sì / No","Sim / Não"],["Forse / Non lo so","Talvez / Não sei"]],n:"Exemplos: “Dove è la pista?” (Onde fica a pista?), “Quando è la gara?” (Quando é a competição?). Em italiano, a pergunta mantém a ordem da frase; muda só a entonação."},
+{t:"Vocabulário de patinação artística",d:"As palavras do seu esporte.",p:[["il pattinaggio artistico","a patinação artística"],["i pattini a rotelle","os patins quad"],["la rotella","a roda"],["la pista","a pista"],["il salto","o salto"],["la trottola","a pirueta"],["la gara","a competição"],["il giudice","o juiz"],["il punteggio","a pontuação"],["la caduta","a queda"]],n:"Substantivos têm gênero: il / lo / l' (masculino), la (feminino). No plural: i pattini, le rotelle."},
+{t:"Comunicação com o técnico durante os treinos",d:"Frases para usar na pista.",p:[["Sono pronto","Estou pronto"],["Non ho capito","Não entendi"],["Posso provare di nuovo?","Posso tentar de novo?"],["Posso fare una pausa?","Posso fazer uma pausa?"],["Mi fa male la caviglia","Meu tornozelo dói"],["Ho bisogno di acqua","Preciso de água"],["Più veloce / più lento","Mais rápido / mais lento"],["Ancora una volta","Mais uma vez"],["Come è stato il mio salto?","Como foi meu salto?"],["Grazie, coach","Obrigado, técnico"]],n:"“Allenatore” é o técnico. Muitos italianos dizem “coach” ou “mister” no dia a dia. Avise sempre quando sentir dor: “Mi fa male...” + parte do corpo."}
+];
+const V=[
+["Italiano básico","Ciao","Oi / tchau","Ciao, come stai?"],["Italiano básico","Per favore","Por favor","Un'acqua, per favore."],["Italiano básico","Grazie","Obrigado","Grazie mille!"],["Italiano básico","Scusa","Desculpe","Scusa, sono in ritardo."],["Italiano básico","Non capisco","Não entendo","Non capisco, puoi ripetere?"],["Italiano básico","Come stai?","Como você está?","Ciao Marco, come stai?"],["Italiano básico","Sì","Sim","Sì, sono pronto."],["Italiano básico","Mi chiamo...","Meu nome é...","Mi chiamo Pedro."],["Italiano básico","Buongiorno","Bom dia","Buongiorno, allenatore!"],["Italiano básico","Arrivederci","Até logo","Arrivederci a domani."],
+["Patinação artística","il pattinaggio artistico","a patinação artística","Faccio pattinaggio artistico."],["Patinação artística","i pattini","os patins","I miei pattini sono nuovi."],["Patinação artística","la rotella","a roda","Devo cambiare una rotella."],["Patinação artística","la pista","a pista","La pista è pronta."],["Patinação artística","il salto","o salto","Il salto è alto."],["Patinação artística","la trottola","a pirueta","Faccio una trottola."],["Patinação artística","la gara","a competição","La gara è sabato."],["Patinação artística","il giudice","o juiz","Il giudice guarda i salti."],["Patinação artística","il punteggio","a pontuação","Il punteggio è buono."],["Patinação artística","la caduta","a queda","Nessuna caduta oggi!"],
+["Coreografia e treinamento","la coreografia","a coreografia","La coreografia è nuova."],["Coreografia e treinamento","la musica","a música","La musica è bellissima."],["Coreografia e treinamento","il programma libero","o programa livre","Provo il programma libero."],["Coreografia e treinamento","il passo","o passo","Questo passo è difficile."],["Coreografia e treinamento","la sequenza","a sequência","La sequenza di passi."],["Coreografia e treinamento","il ritmo","o ritmo","Segui il ritmo."],["Coreografia e treinamento","l'espressione","a expressão","Serve più espressione."],["Coreografia e treinamento","il costume","o figurino","Il costume è blu."],["Coreografia e treinamento","la prova","o ensaio / a prova","Oggi c'è la prova."],["Coreografia e treinamento","il riscaldamento","o aquecimento","Iniziamo il riscaldamento."],
+["Comunicação com o técnico","l'allenatore","o técnico","L'allenatore arriva alle sei."],["Comunicação com o técnico","l'allenamento","o treino","L'allenamento è lungo."],["Comunicação com o técnico","Ancora una volta","Mais uma vez","Ancora una volta, per favore."],["Comunicação com o técnico","Più veloce","Mais rápido","Più veloce nella rotazione!"],["Comunicação com o técnico","Più lento","Mais devagar","Più lento all'inizio."],["Comunicação com o técnico","Bravo!","Muito bem!","Bravo, ottimo salto!"],["Comunicação com o técnico","Concentrati","Concentre-se","Concentrati sull'atterraggio."],["Comunicação com o técnico","Respira","Respire","Respira e riparti."],["Comunicação com o técnico","Posso fare una pausa?","Posso fazer uma pausa?","Scusa, posso fare una pausa?"],["Comunicação com o técnico","Ho capito","Entendi","Sì, ho capito."]
+];
+const EX=[
+{q:"Como se diz “Bom dia” em italiano?",o:["Buongiorno","Arrivederci","Buonanotte","Piacere"],a:0,e:"Buongiorno é usado de manhã até o início da tarde. Buonanotte é só para dormir e Arrivederci é despedida."},
+{q:"Complete: Io ___ brasiliano.",o:["sei","sono","è","siamo"],a:1,e:"Com “io” (eu), o verbo essere é “sono”: Io sono brasiliano."},
+{q:"Escreva em italiano: “obrigado”",t:["grazie"],e:"“Grazie” significa obrigado. Atenção à escrita: gra-zie, com um só z e terminando em “ie”."},
+{q:"Qual número é “otto”?",o:["6","7","8","9"],a:2,e:"Uno, due, tre, quattro, cinque, sei, sette, otto: otto é 8."},
+{q:"Complete: Posso fare una ___? (pausa para descansar)",t:["pausa"],e:"“Pausa” é igual ao português. “Posso fare una pausa?” = Posso fazer uma pausa?"}
+];
+const DI=[
+{t:"Chegada ao treino",s:[["Buongiorno! Come stai?","Bom dia! Como você está?",["Sto bene, grazie!","Arrivederci!","Mi chiamo bene."],"“Sto bene, grazie” responde a “Come stai?”."],["Sei pronto per l'allenamento?","Você está pronto para o treino?",["No, grazie, buonanotte.","Sì, sono pronto.","Ho una pista."],"“Sì, sono pronto” = Sim, estou pronto."],["Iniziamo con il riscaldamento.","Vamos começar pelo aquecimento.",["Va bene, coach!","Dove è la gara?","Piacere!"],"“Va bene” = Tudo bem, combinado."]]},
+{t:"Não entendi a instrução",s:[["Fai un salto e poi una trottola.","Faça um salto e depois uma pirueta.",["Arrivederci.","Sono brasiliano.","Non ho capito. Puoi ripetere?"],"Quando não entender, peça: “Non ho capito. Puoi ripetere?”."],["Più veloce nell'atterraggio!","Mais rápido na aterrissagem!",["Ho capito, grazie.","Buonasera, musica.","Forse lunedì."],"“Ho capito” = Entendi."],["Ancora una volta.","Mais uma vez.",["Mi chiamo salto.","Sì, ancora una volta!","Quanto costa?"],"Aceite o pedido repetindo: “Sì, ancora una volta!”."]]},
+{t:"Dor e pausa",s:[["Che cosa succede?","O que está acontecendo?",["Buongiorno, pista.","Grazie mille, giudice.","Mi fa male la caviglia."],"“Mi fa male la caviglia” = Meu tornozelo dói."],["Vuoi fare una pausa?","Quer fazer uma pausa?",["Sì, grazie. Ho bisogno di acqua.","Sono di Viamão.","Il punteggio è otto."],"“Ho bisogno di acqua” = Preciso de água."],["Va bene. Riposati cinque minuti.","Tudo bem. Descanse cinco minutos.",["Ciao, caduta.","Grazie mille, coach.","Non lo so, forse."],"Agradeça sempre: “Grazie mille, coach”."]]}
+];
+const $=s=>document.querySelector(s);
+let S={les:[],ex:{},dia:[],fav:[]};
+try{S=Object.assign(S,JSON.parse(localStorage.getItem("ios")||"{}"))}catch(e){}
+const save=()=>{try{localStorage.setItem("ios",JSON.stringify(S))}catch(e){}};
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9 ]/g,"").trim();
+let view="home",open=-1,cat="Todas",dstate={};
+
+function go(v){view=v;document.querySelectorAll("section").forEach(s=>s.classList.toggle("on",s.id===v));document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.v===v));scrollTo(0,0);render()}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{open=-1;go(b.dataset.v)});
+
+function pct(){const done=S.les.length+Object.values(S.ex).filter(Boolean).length+S.dia.length;return[done,Math.round(done/16*100)]}
+function home(){const[d,p]=pct();$("#fill").style.width=p+"%";
+$("#stats").innerHTML=`<span><b>${p}%</b> concluído</span><span>Aulas: ${S.les.length}/8</span><span>Exercícios: ${Object.values(S.ex).filter(Boolean).length}/5</span><span>Diálogos: ${S.dia.length}/3</span>`}
+$("#start").onclick=()=>{let n=LESSONS.findIndex((_,i)=>!S.les.includes(i));open=n<0?0:n;go("aulas")};
+
+function lessons(){const el=$("#lessons");
+if(open<0){el.innerHTML=`<h2>Aulas</h2><p class="sub">Oito aulas, do básico à conversa com o técnico.</p><div class="list">`+LESSONS.map((l,i)=>`<button class="row" data-i="${i}"><span class="dot ${S.les.includes(i)?"d":""}">${S.les.includes(i)?"✓":""}</span><span><b>Aula ${i+1}: ${l.t}</b><small>${l.d}</small></span></button>`).join("")+`</div>`;
+el.querySelectorAll(".row").forEach(b=>b.onclick=()=>{open=+b.dataset.i;lessons();scrollTo(0,0)});return}
+const l=LESSONS[open],done=S.les.includes(open);
+el.innerHTML=`<button class="btn ln" id="back">Voltar às aulas</button><h2 style="margin-top:18px">Aula ${open+1}: ${l.t}</h2><p class="sub">${l.d}</p><div class="card"><table>${l.p.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join("")}</table><div class="tip">${l.n}</div></div><button class="btn dk" id="fin">${done?"Aula concluída (desmarcar)":"Marcar como concluída"}</button> ${open<7?`<button class="btn ln" id="next">Próxima aula</button>`:""}`;
+$("#back").onclick=()=>{open=-1;lessons()};
+$("#fin").onclick=()=>{S.les=done?S.les.filter(x=>x!==open):[...S.les,open];save();lessons()};
+if($("#next"))$("#next").onclick=()=>{open++;lessons();scrollTo(0,0)}}
+
+function vocab(){const cats=["Todas","Favoritas",...new Set(V.map(v=>v[0]))];
+$("#chips").innerHTML=cats.map(c=>`<button class="chip ${c===cat?"on":""}" data-c="${c}">${c}</button>`).join("");
+$("#chips").querySelectorAll(".chip").forEach(b=>b.onclick=()=>{cat=b.dataset.c;vocab()});
+const items=V.map((v,i)=>[v,i]).filter(([v,i])=>cat==="Todas"||(cat==="Favoritas"?S.fav.includes(i):v[0]===cat));
+$("#vlist").innerHTML=items.length?items.map(([v,i])=>`<div class="card" style="margin:0"><div class="w"><div><h3>${v[1]}</h3><div>${v[2]}</div><div class="ex">${v[3]}</div></div><button class="star ${S.fav.includes(i)?"on":""}" data-i="${i}" aria-label="Favoritar">${S.fav.includes(i)?"★":"☆"}</button></div></div>`).join(""):`<p class="sub">Nenhuma favorita ainda. Toque na estrela de uma palavra para guardar.</p>`;
+$("#vlist").querySelectorAll(".star").forEach(b=>b.onclick=()=>{const i=+b.dataset.i;S.fav=S.fav.includes(i)?S.fav.filter(x=>x!==i):[...S.fav,i];save();vocab()})}
+
+function exs(){const el=$("#exs");
+el.innerHTML=EX.map((x,i)=>`<div class="card" id="e${i}"><b>${i+1}. ${x.q}</b>${x.o?`<div class="opts">${x.o.map((o,j)=>`<button class="opt" data-i="${i}" data-j="${j}">${o}</button>`).join("")}</div>`:`<input type="text" id="t${i}" autocomplete="off" placeholder="Sua resposta"><button class="btn dk chk" data-i="${i}">Verificar</button>`}<div class="fb" id="f${i}" ${S.ex[i]===undefined?"hidden":""}>${S.ex[i]===undefined?"":(S.ex[i]?"Correto. ":"Ainda não. ")+x.e}</div></div>`).join("");
+el.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{const i=+b.dataset.i,j=+b.dataset.j,x=EX[i],ok=j===x.a;
+document.querySelectorAll(`#e${i} .opt`).forEach((o,k)=>{o.disabled=true;if(k===x.a)o.classList.add("ok");else if(k===j)o.classList.add("no")});
+fin(i,ok)});
+el.querySelectorAll(".chk").forEach(b=>b.onclick=()=>{const i=+b.dataset.i;fin(i,EX[i].t.includes(norm($("#t"+i).value)))});
+}
+function fin(i,ok){S.ex[i]=ok?1:0;save();const f=$("#f"+i);f.hidden=false;f.innerHTML=(ok?"<b>Correto.</b> ":"<b>Ainda não.</b> ")+EX[i].e+(ok?"":` <button class="chip" onclick="retry(${i})">Tentar de novo</button>`)}
+function retry(i){delete S.ex[i];save();exs()}
+
+function dias(){const el=$("#dias");
+el.innerHTML=DI.map((d,i)=>{const st=dstate[i];
+if(!st)return`<div class="card"><h3>${d.t}</h3>${S.dia.includes(i)?'<p class="sub">Diálogo concluído.</p>':""}<button class="btn dk" onclick="dstart(${i})">${S.dia.includes(i)?"Refazer":"Iniciar diálogo"}</button></div>`;
+let h=`<div class="card"><h3>${d.t}</h3>`;
+for(let k=0;k<=st.k&&k<3;k++){const s=d.s[k];h+=`<div class="coach">${s[0]}<small>${s[1]}</small></div>`;
+if(k<st.k||st.r){h+=`<div class="fb"><b>${st.h[k]?"Resposta certa.":"Resposta incorreta."}</b> ${s[3]}</div>`}
+else h+=`<div class="opts">${s[2].map((o,j)=>`<button class="opt" onclick="dans(${i},${j})">${o}</button>`).join("")}</div>`}
+if(st.k===2&&st.r){const n=st.h.filter(Boolean).length;h+=`<p style="margin-top:12px"><b>Resultado: ${n} de 3.</b></p>`}
+else if(st.r)h+=`<button class="btn dk" style="margin-top:10px" onclick="dnext(${i})">Continuar</button>`;
+return h+"</div>"}).join("")}
+function dstart(i){dstate[i]={k:0,h:[],r:false};dias()}
+function dans(i,j){const st=dstate[i],s=DI[i].s[st.k];const right=s[2].findIndex(o=>o===s[2].find(x=>true));
+// resposta certa = a que está marcada no array 'ans'
+const ok=ANS[i][st.k]===j;st.h[st.k]=ok;st.r=true;
+if(st.k===2){if(!S.dia.includes(i)){S.dia.push(i);save()}}dias()}
+function dnext(i){dstate[i].k++;dstate[i].r=false;dias()}
+const ANS=[[0,1,0],[2,0,1],[2,0,1]];
+
+function render(){if(view==="home")home();if(view==="aulas")lessons();if(view==="vocab")vocab();if(view==="pratica"){exs();dias()}}
+go("home");
+</script>
+</body>
+</html>
